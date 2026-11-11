@@ -1,0 +1,1 @@
+"""MedBud prediction API."""

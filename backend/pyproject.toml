@@ -1,0 +1,29 @@
+[project]
+name = "medbud-api"
+version = "1.0.0"
+description = "Prediction API for the MedBud disease models."
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "fastapi>=0.115.6",
+  "httpx>=0.28.1",
+  "numpy==1.26.4",
+  "pandas==2.2.2",
+  "pytest>=8.3.4",
+  "scikit-learn==1.4.2",
+  "scipy==1.17.1",
+  "uvicorn[standard]>=0.34.0",
+  "xgboost==2.0.3",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.uv]
+package = false
+
+[tool.vercel]
+entrypoint = "app.main:app"
+
+[tool.vercel.scripts]
+build = "python scripts/stage_models.py"

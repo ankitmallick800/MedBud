@@ -1,0 +1,16 @@
+node_modules
+.venv
+__pycache__
+.pytest_cache
+*.py[cod]
+.DS_Store
+*.tsbuildinfo
+.vite
+dist
+notebooks
+legacy
+.vercel
+.env
+.env.*
+backend/ml
+backend/datasets
